@@ -36,8 +36,12 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem 'devise', github: 'plataformatec/devise'
+gem 'omniauth-reddit', github: 'jackdempsey/omniauth-reddit'
+# bug with oauth2 1.4.0 will break omniauth-reddit
+gem 'omniauth-oauth2', '1.3.1'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'bootswatch-rails'
+gem 'font-awesome-rails'
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
