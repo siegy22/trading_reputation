@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   namespace :users do
     delete :sign_out, to: "sessions#destroy", as: "sign_out"
   end
+
+  resource :me, only: [:show, :edit, :update], controller: "me"
 end

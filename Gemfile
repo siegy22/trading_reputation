@@ -42,6 +42,13 @@ gem 'omniauth-oauth2', '1.3.1'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'bootswatch-rails'
 gem 'font-awesome-rails'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'simple_form'
+
+group :test do
+  gem 'capybara'
+end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.

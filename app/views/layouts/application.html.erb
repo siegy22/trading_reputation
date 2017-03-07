@@ -12,9 +12,14 @@
     <%= render 'layouts/navbar' %>
     <div class="container">
       <%= render 'layouts/alerts' %>
-      <div class="page-header">
-	<%= yield :header %>
-      </div>
+      <% if content_for?(:header) %>
+	<div class="page-header">
+	  <div class="pull-right">
+	    <%= yield :header_actions %>
+	  </div>
+	  <%= yield :header %>
+	</div>
+      <% end %>
       <%= yield %>
     </div>
   </body>

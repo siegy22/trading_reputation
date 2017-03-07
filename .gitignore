@@ -19,3 +19,7 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+
+# Ignore carrierwave uploads
+public/uploads/*
+!public/uploads/.keep

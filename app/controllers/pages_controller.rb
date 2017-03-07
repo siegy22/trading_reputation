@@ -5,7 +5,7 @@ class PagesController < ApplicationController
     if template_exists?(page_path)
       render page_path
     else
-      render_404
+      raise ActionController::RoutingError, "Cannot find page #{params[:page]}"
     end
   end
 end
