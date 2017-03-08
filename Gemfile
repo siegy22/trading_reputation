@@ -45,6 +45,7 @@ gem 'font-awesome-rails'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'simple_form'
+gem 'dotenv-rails'
 
 group :test do
   gem 'capybara'

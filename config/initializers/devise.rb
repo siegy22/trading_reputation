@@ -272,7 +272,7 @@ Devise.setup do |config|
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
 
-  config.omniauth :reddit, "dpszIKyLb42CNg", "JHVqyyOz6lUdPz5PkH8ateQJaNk",
+  config.omniauth :reddit, ENV["REDDIT_API_KEY"], ENV["REDDIT_APP_SECRET"],
     scope: "identity read",
     duration: "permanent"
 end
