@@ -2,3 +2,9 @@ language: ruby
 cache: bundler
 rvm:
   - 2.4.0
+
+services:
+  - postgresql
+
+before_script:
+  - psql -c 'create database trading_reputation_test;' -U postgres
