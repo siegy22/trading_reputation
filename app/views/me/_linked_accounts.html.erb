@@ -1,0 +1,24 @@
+<ul class="list-unstyled omniauth-providers">
+  <% User.linkable_providers.each do |provider| %>
+    <li>
+      <% if connection = @me.connection_with_provider(provider) %>
+	<% if connection.link %>
+	  <%= link_to connection.link, class: "btn btn-social btn-#{provider}", target: :_blank do %>
+	    <%= social_image(connection.provider) %>
+	    <%= connection.name %>
+	  <% end %>
+	<% else %>
+	  <%= button_tag class: "btn btn-social btn-#{provider} btn-clipboard", data: { "clipboard-text" => connection.name, "toggle" => "tooltip", "title" => "Copy to clipboard" } do %>
+	    <%= social_image(connection.provider) %>
+	    <%= connection.name %>
+	  <% end %>
+	<% end %>
+      <% else %>
+	<%= link_to public_send("user_#{provider}_omniauth_authorize_path"), class: "btn btn-social btn-#{provider}" do %>
+	  <%= social_image(provider) %>
+	  Connect <%= provider %> profile
+	<% end %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>

@@ -4,11 +4,11 @@ class ManageConnectionsTest < ActionDispatch::IntegrationTest
   test "link account and show linked account" do
     authenticate!
     visit me_path
-    assert_equal [
-                  "IG Aim",
-                  "Connect discord profile",
-                  "Connect windowslive profile"
-                 ], all(".omniauth-providers li a").map(&:text)
+    assert_omniauth_providers [
+                               "IG Aim",
+                               "Connect discord profile",
+                               "Connect windowslive profile"
+                              ]
 
     # prepare discord response
     OmniAuth.config.mock_auth[:discord] = OmniAuth::AuthHash.new(uid: "123456789",
@@ -20,11 +20,16 @@ class ManageConnectionsTest < ActionDispatch::IntegrationTest
 
     click_on "Connect discord profile"
 
-    assert_equal [
-                  "IG Aim",
-                  "IG Aim#7679",
-                  "Connect windowslive profile"
-                 ], all(".omniauth-providers li a").map(&:text)
+    assert_omniauth_providers [
+                               "IG Aim",
+                               "IG Aim#7679",
+                               "Connect windowslive profile"
+                              ]
 
+  end
+
+  private
+  def assert_omniauth_providers(providers)
+    assert_equal providers, all(".omniauth-providers li .btn-social").map(&:text)
   end
 end

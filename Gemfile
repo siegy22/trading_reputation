@@ -42,12 +42,16 @@ gem 'omniauth-reddit', github: 'jackdempsey/omniauth-reddit'
 gem 'omniauth-windowslive'
 # bug with oauth2 1.4.0 will break omniauth-reddit
 gem 'omniauth-oauth2', '1.3.1'
+
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'bootswatch-rails'
 gem 'font-awesome-rails'
+gem 'clipboard-rails'
+gem 'simple_form'
+
 gem 'carrierwave'
 gem 'mini_magick'
-gem 'simple_form'
+
 gem 'dotenv-rails'
 
 group :test do

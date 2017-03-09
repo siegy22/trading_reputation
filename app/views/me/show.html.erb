@@ -9,22 +9,6 @@
 <div class="panel panel-default pull-right">
   <div class="panel-heading">Linked accounts</div>
   <div class="panel-body">
-    <ul class="list-unstyled omniauth-providers">
-      <% User.linkable_providers.each do |provider| %>
-	<li>
-	  <% if connection = @me.connection_with_provider(provider) %>
-	    <%= link_to connection.link, class: "btn btn-social btn-#{provider}", target: :_blank do %>
-	      <%= social_image(connection.provider) %>
-	      <%= connection.name %>
-	    <% end %>
-	  <% else %>
-	    <%= link_to public_send("user_#{provider}_omniauth_authorize_path"), class: "btn btn-social btn-#{provider}" do %>
-	      <%= social_image(provider) %>
-	      Connect <%= provider %> profile
-	    <% end %>
-	  <% end %>
-	</li>
-      <% end %>
-    </ul>
+    <%= render 'linked_accounts' %>
   </div>
 </div>
