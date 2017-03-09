@@ -23,3 +23,6 @@
 # Ignore carrierwave uploads
 public/uploads/*
 !public/uploads/.keep
+
+# Ignore .env files
+.env.local

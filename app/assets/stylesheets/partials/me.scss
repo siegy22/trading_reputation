@@ -1,0 +1,11 @@
+ul.omniauth-providers {
+  li {
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+
+    a {
+      width: 100%;
+    }
+  }
+}

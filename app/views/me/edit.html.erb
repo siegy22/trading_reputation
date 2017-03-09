@@ -5,6 +5,7 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= simple_form_for @me, url: me_path do |f| %>
+      <%= image_tag @me.avatar.url, class: "img-circle", size: "100x100" if @me.avatar? %>
       <%= f.input :avatar, input_html: { accept: "image/*" } %>
       <%= f.input :name, hint: "Can be changed at any time" %>
       <%= f.input :old_rep_comment %>

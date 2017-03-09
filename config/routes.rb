@@ -7,5 +7,7 @@ Rails.application.routes.draw do
     delete :sign_out, to: "sessions#destroy", as: "sign_out"
   end
 
-  resource :me, only: [:show, :edit, :update], controller: "me"
+  resource :me, only: [:show, :edit, :update], controller: "me" do
+    resources :connections, only: :index
+  end
 end

@@ -272,7 +272,15 @@ Devise.setup do |config|
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
 
-  config.omniauth :reddit, ENV["REDDIT_API_KEY"], ENV["REDDIT_APP_SECRET"],
+  # Use reddit to login/register
+  config.omniauth :reddit, ENV["REDDIT_APP_KEY"], ENV["REDDIT_APP_SECRET"],
     scope: "identity read",
     duration: "permanent"
+
+  # Use other providers to link accounts
+  config.omniauth :steam, ENV["STEAM_WEB_API_KEY"]
+  config.omniauth :discord, ENV["DISCORD_CLIENT_ID"], ENV["DISCORD_CLIENT_SECRET"],
+    scope: "identify"
+  config.omniauth :windowslive, ENV["WINDOWS_LIVE_CLIENT_ID"], ENV["WINDOWS_LIVE_CLIENT_SECRET"],
+    scope: "wl.basic"
 end

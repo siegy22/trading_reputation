@@ -36,7 +36,10 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem 'devise', github: 'plataformatec/devise'
+gem 'omniauth-steam'
+gem 'omniauth-discord', github: 'siegy22/omniauth-discord'
 gem 'omniauth-reddit', github: 'jackdempsey/omniauth-reddit'
+gem 'omniauth-windowslive'
 # bug with oauth2 1.4.0 will break omniauth-reddit
 gem 'omniauth-oauth2', '1.3.1'
 gem 'bootstrap-sass', '~> 3.3.6'
