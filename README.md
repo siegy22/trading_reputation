@@ -1,24 +1,26 @@
-# README
+# Trading Reputation Guru
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[![Build Status](https://travis-ci.org/siegy22/trading_reputation.svg?branch=master)](https://travis-ci.org/siegy22/trading_reputation)
 
-Things you may want to cover:
+Community app to track your trades you made, let them be confirmed by the trader you traded with and build reputation fast!
 
-* Ruby version
+## General Information
 
-* System dependencies
+* Ruby: `2.4.0`
+* Rails: `5.0.2`
+* Database: [Postgresql](https://www.postgresql.org/) `9.6`
+* Bootstrap: `3.3.7` ("Paper" theme by [bootswatch](http://bootswatch.com/))
+* Maintained by [@siegy22](https://github.com/siegy22)
 
-* Configuration
+## Development
 
-* Database creation
+> TODO: write instructions for development and testing.
 
-* Database initialization
+## Contributing
 
-* How to run the test suite
+Bug reports and pull requests are welcome on GitHub at https://github.com/siegy22/trading_reputation. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## License
 
-* ...
+The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
