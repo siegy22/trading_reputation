@@ -7,6 +7,7 @@ class User < ApplicationRecord
   validates :name, presence: true
 
   has_many :connections
+  has_and_belongs_to_many :roles
 
   def self.from_reddit_omniauth(auth)
     where(reddit_uid: auth.uid).first_or_create do |user|

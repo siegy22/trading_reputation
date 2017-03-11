@@ -10,3 +10,4 @@ aim:
   reddit_name: Elektron1c97
   name: Aim
   sign_in_count: 100
+  roles: [admin, developer]

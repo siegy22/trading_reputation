@@ -16,6 +16,10 @@ class ManageMeTest < ActionDispatch::IntegrationTest
       click_on "Sign in with reddit"
     end
 
+    created_user = User.find_by(reddit_name: reddit_name)
+    created_user.roles << roles(:donator)
+    created_user.roles << roles(:developer)
+
     assert_flash "Nice to have you here! You can now complete your profile", type: "info"
     assert_equal "TheDude", find("#user_name").value
 
@@ -28,6 +32,7 @@ class ManageMeTest < ActionDispatch::IntegrationTest
     click_on "Save"
 
     assert_equal "#{custom_name} /u/#{reddit_name}", find("h1").text
+    assert_equal %w(donator developer), all(".roles .label").map(&:text)
   end
 
   test "Logging in with reddit (user already exists)" do

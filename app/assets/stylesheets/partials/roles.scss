@@ -1,0 +1,17 @@
+.label {
+  &.label-admin {
+    @include label-variant(crimson);
+  }
+
+  &.label-donator {
+    @include label-variant(gold);
+  }
+
+  &.label-developer {
+    @include label-variant(navy);
+  }
+}
+
+.roles {
+  font-size: 2rem;
+}
