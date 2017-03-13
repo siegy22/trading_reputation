@@ -1,3 +1,7 @@
+.btn-steam         { @include btn-social(#171A21); }
+.btn-discord       { @include btn-social(#7289DA); }
+.btn-windowslive   { @include btn-social(#77bb44); }
+
 .btn-login-oauth {
   margin-left: 10px;
 
