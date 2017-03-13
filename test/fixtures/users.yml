@@ -5,9 +5,15 @@
 # below each fixture, per the syntax in the comments below
 #
 
-aim:
+admin_aim:
   reddit_uid: wwkxo
   reddit_name: Elektron1c97
   name: Aim
   sign_in_count: 100
   roles: [admin, developer]
+
+donator_slayer:
+  reddit_uid: kfame
+  reddit_name: Slayer123
+  name: I am the slayer
+  roles: [donator]

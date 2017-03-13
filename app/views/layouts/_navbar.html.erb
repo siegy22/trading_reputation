@@ -26,6 +26,9 @@
             <li><a href="#">One more separated link</a></li>
           </ul>
         </li>
+	<% current_user.try(:roles).try(:each) do |role| %>
+	  <%= render "#{role.name}/navigation" rescue nil %>
+	<% end %>
       </ul>
       <ul class="nav navbar-nav navbar-right">
 	<% if user_signed_in? %>

@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ManageConnectionsTest < ActionDispatch::IntegrationTest
   test "link account and show linked account" do
-    authenticate!
+    login_as(users(:admin_aim))
     visit me_path
     assert_omniauth_providers [
                                "IG Aim",

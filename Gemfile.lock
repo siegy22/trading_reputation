@@ -17,6 +17,13 @@ GIT
       warden (~> 1.2.3)
 
 GIT
+  remote: https://github.com/senny/corner_stones.git
+  revision: 65537c8ac505e387799730acae4c07163499806e
+  specs:
+    corner_stones (0.0.1.beta1)
+      capybara
+
+GIT
   remote: https://github.com/siegy22/omniauth-discord.git
   revision: 02d817f321a25a9415811a55e0c4c56d993c2445
   specs:
@@ -255,6 +262,7 @@ DEPENDENCIES
   carrierwave
   clipboard-rails
   coffee-rails (~> 4.2)
+  corner_stones!
   devise!
   dotenv-rails
   font-awesome-rails

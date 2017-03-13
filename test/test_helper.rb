@@ -2,7 +2,10 @@ ENV['RAILS_ENV'] ||= 'test'
 require_relative '../config/environment'
 require 'rails/test_help'
 require 'capybara/rails'
-require 'fileutils'
+require 'corner_stones/all'
+
+# use binding.irb for debugging
+require 'irb'
 
 OmniAuth.config.test_mode = true
 
@@ -25,6 +28,7 @@ end
 class ActionDispatch::IntegrationTest
   # Make the Capybara DSL available in all integration tests
   include Capybara::DSL
+  include Warden::Test::Helpers
 
   def teardown
     super

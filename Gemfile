@@ -56,6 +56,7 @@ gem 'dotenv-rails'
 
 group :test do
   gem 'capybara'
+  gem 'corner_stones', github: 'senny/corner_stones'
 end
 
 group :development do

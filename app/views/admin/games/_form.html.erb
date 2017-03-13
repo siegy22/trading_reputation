@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= simple_form_for [:admin, @game] do |f| %>
+      <%= image_tag @game.image.url, size: "100x100" if @game.image? %>
+      <%= f.input :image, input_html: { accept: "image/*" } %>
+      <%= f.input :name %>
+      <%= link_to "Cancel", admin_games_path, class: "btn btn-default" %>
+      <%= f.button :submit %>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+rocket_league:
+  name: Rocket League
+  image: "rl.jpg"
+
+cs_go:
+  name: "Counter-Strike: Global Offensive"
+  image: "csgo.jpg"
