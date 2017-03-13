@@ -4,6 +4,8 @@
 
 Community app to track your trades you made, let them be confirmed by the trader you traded with and build reputation fast!
 
+![Logo](misc/logo.png)
+
 ## General Information
 
 * Ruby: `2.4.0`
